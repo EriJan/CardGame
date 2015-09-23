@@ -37,5 +37,41 @@ public class CardGame {
       System.out.println(card);
     }
 
+
+    System.out.println();
+    System.out.println();
+    System.out.println();
+    System.out.println("Printing a shuffled version of the deck.");
+    Collections.shuffle(sortedDeck);
+    for (PlayingCard card : sortedDeck) {
+      System.out.println(card);
+    }
+
+    // D
+    PlayingCard[] hand1 = new PlayingCard[5];
+    PlayingCard[] hand2 = new PlayingCard[5];
+    for (int i = 0; i < 5; i++) {
+      hand1[i] = sortedDeck.remove(0);
+    }
+
+    for (int i = 0; i < 5; i++) {
+      hand2[i] = sortedDeck.remove(0);
+    }
+
+    System.out.println();
+    System.out.println("Printing hand 1.");
+    for (PlayingCard card : hand1) {
+      System.out.println(card);
+    }
+    System.out.println();
+    System.out.println("Printing hand 2.");
+    for (PlayingCard card : hand2) {
+      System.out.println(card);
+    }
+    System.out.println();
+    System.out.println("Rest of the deck.");
+    for (PlayingCard card : sortedDeck) {
+      System.out.println(card);
+    }
   }
 }
