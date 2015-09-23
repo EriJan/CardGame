@@ -8,12 +8,16 @@ public class CardGame {
   public static void main(String[] args) {
 
     // Create a full deck
-    List<PlayingCard> fullDeck = new ArrayList<PlayingCard>();
+    // Use set to get exclusive cards
+    Set<PlayingCard> fullDeck = new HashSet<PlayingCard>();
     for (Suit suit : Suit.values()) {
       for (int i = 1; i <=13; i++) {
         fullDeck.add(new PlayingCard(suit,i));
       }
     }
+
+    System.out.println("Printing the full deck from HashSet. Probably shuffled.");
+    System.out.println();
 
     // Print full deck
     for (PlayingCard card : fullDeck) {
@@ -23,22 +27,13 @@ public class CardGame {
     System.out.println();
     System.out.println();
     System.out.println();
-
-    // Copy deck to HashSet
-    // Will be shuffled because of how HashSet works
-    Set<PlayingCard> shuffledDeck = new HashSet<PlayingCard>(fullDeck);
-    for (PlayingCard card : shuffledDeck) {
-      System.out.println(card);
-    }
-    System.out.println();
-    System.out.println();
-    System.out.println();
+    System.out.println("Printing a sorted version of the deck.");
 
     // Copy back to new array list
     // Sort the deck
-    List<PlayingCard> copiedDeck = new ArrayList<PlayingCard>(shuffledDeck);
-    Collections.sort(copiedDeck);
-    for (PlayingCard card : copiedDeck) {
+    List<PlayingCard> sortedDeck = new ArrayList<PlayingCard>(fullDeck);
+    Collections.sort(sortedDeck);
+    for (PlayingCard card : sortedDeck) {
       System.out.println(card);
     }
 

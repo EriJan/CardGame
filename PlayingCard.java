@@ -62,8 +62,6 @@ class PlayingCard implements Comparable<PlayingCard> {
     } else {
       compRes = this.suit.value - card.getSuit().value;
     }
-    System.out.println(compRes);
-
     return compRes;
   }
 
