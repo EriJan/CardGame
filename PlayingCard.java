@@ -32,7 +32,7 @@ class PlayingCard implements Comparable<PlayingCard> {
       this.value = 13;
     } else if (val == 'A') {
       this.value = 1;
-    } else {
+    } else if (Character.isDigit(val)) {
       this.value = Character.getNumericValue(val);
     }
   }
@@ -71,23 +71,24 @@ class PlayingCard implements Comparable<PlayingCard> {
 
     switch (value) {
       case 1:
-        valString = "Ace";
+        valString = "A";
         break;
       case 11:
-        valString = "Jack";
+        valString = "J";
         break;
       case 12:
-        valString = "Queen";
+        valString = "Q";
         break;
       case 13:
-        valString = "King";
+        valString = "K";
         break;
       default:
         valString = Integer.toString(value);
         break;
       }
 
-      return valString + " of " + suit;
+      // return valString + " of " + suit;
+      return suit + valString;
   }
 
   int getValue() {
