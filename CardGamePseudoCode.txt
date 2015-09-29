@@ -1,0 +1,39 @@
+Card game classes
+  DeckHandler
+  PlayingCard (card suit should be enum for comparision reasons)
+
+  CardGame super class (abstract)
+  SpecificGame class, subclass of CardGame
+
+Player
+
+
+DeckHandler
+  constant fullDeck - full card deck template
+  deckInUse - one or more fullDeck sets, shuffleDeck
+  discardPile - discarded cards/played cards
+
+  newDeck
+  shuffleDeck
+  sortDeck
+  drawCard face up or face down
+  toDiscardPile
+  turnDiscard
+  isEmpty
+  cardsLeft
+
+
+CardHand
+
+
+PlayingCard
+  constant suit
+  constant value
+  faceUp?
+
+  redOrBlack()
+  toString()
+  compareTo()
+  getValue()
+  getSuit()
+  isFaceup;

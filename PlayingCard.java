@@ -9,8 +9,8 @@
 
 class PlayingCard implements Comparable<PlayingCard> {
 
-  private Suit suit;
-  private int value;
+  private final Suit suit;
+  private final int value;
 
   PlayingCard(Suit suit, int val) {
     this.suit = suit;

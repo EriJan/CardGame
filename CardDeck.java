@@ -18,7 +18,7 @@ class CardDeck {
         fullDeck.add(new PlayingCard(suit,i));
       }
     }
-    currentDeck = new ArrayList<PlayingCard>(fullDeck);
+    // currentDeck = new ArrayList<PlayingCard>(fullDeck);
   }
 
   public PlayingCard drawTop() {
