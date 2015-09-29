@@ -5,7 +5,23 @@ Card game classes
   CardGame super class (abstract)
   SpecificGame class, subclass of CardGame
 
+CardGame
+  - Abstract superclass
+  One method: startGame()
+  - Players instantiated here???
+
+SpecificCardGame
+  extends CardGame
+  Adds all game specific funktions.
+  
+
 Player
+  name
+  statistics
+  CardHand
+
+  writeStatsToFile
+  setName
 
 
 DeckHandler
@@ -24,6 +40,12 @@ DeckHandler
 
 
 CardHand
+  hand - dynamic list of cards
+
+  drawCard
+  discardCard
+  handValue
+  getNoOfCards
 
 
 PlayingCard
