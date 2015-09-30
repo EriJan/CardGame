@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class BlackJack {
+public class BlackJack extends CardGame {
   CardDeck deck;
   // BlackJackPlayer[] players;
   // BlackJackPlayer house;
@@ -16,16 +16,19 @@ public class BlackJack {
   //
 
   BlackJack () {
-    Scanner userInput = new Scanner(System.in);
-    System.out.println("How many postions at the table?");
-    String usrInputStr = userInput.nextLine();
-    userInput.nextLine();
+    // Scanner userInput = new Scanner(System.in);
+    // System.out.println("How many postions at the table?");
+    // String usrInputStr = userInput.nextLine();
+    // userInput.nextLine();
     // if () {}
     // Ask for size of deck
     // create deck
   }
 
-
+  @Override
+  public void runGame() {
+    System.out.println("We are live!");
+  }
 
   // newGame
   // initialDeal
