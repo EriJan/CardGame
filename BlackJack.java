@@ -18,7 +18,8 @@ public class BlackJack {
   BlackJack () {
     Scanner userInput = new Scanner(System.in);
     System.out.println("How many postions at the table?");
-    String usrInputStr = userInput.next();
+    String usrInputStr = userInput.nextLine();
+    userInput.nextLine();
     // if () {}
     // Ask for size of deck
     // create deck
