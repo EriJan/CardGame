@@ -10,8 +10,8 @@ public class Player implements java.io.Serializable {
 
 	public Player() {
 		addNumberOfPlayers(); //Alltså, kanske inte helt lyckat? Måste väl i så fall ta bort spelare från listan?
-								//Tänkte att man (när jag förstår hur det funkar helt och hållet) kan koppla antaletSpelare 
-								//till en funktion i FileSerializable så att man från en binär fil kan utläsa hur många 
+								//Tänkte att man (när jag förstår hur det funkar helt och hållet) kan koppla antaletSpelare
+								//till en funktion i FileSerializable så att man från en binär fil kan utläsa hur många
 								// Player det finns totalt
 	}
 
@@ -44,21 +44,16 @@ public class Player implements java.io.Serializable {
 	public int getLoss() {
 		return loss_;
 	}
-	
+
 	public void setNumberOfGames(){
-		numberOfGames_ += 1; 
+		numberOfGames_ += 1;
 	}
-	
+
 	public int getNumberOfMovesPerGame(){
-		return numberOfMovesPerGame_ /= numberOfGames_; 
+		return numberOfMovesPerGame_ /= numberOfGames_;
 	}
 
 	private static void addNumberOfPlayers(){
-		numberOfPlayers_ += 1; 
+		numberOfPlayers_ += 1;
 	}
-}
-
-
-
-
 }

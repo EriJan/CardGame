@@ -13,9 +13,15 @@ CardGame
 SpecificCardGame
   extends CardGame
   Adds all game specific funktions.
-  
 
-Player
+BlackJack
+  extends CardGame
+  DeckHandler
+  BlackJackPlayer extends CardPlayer
+    BlackJackHand extends CardHand
+
+
+CardPlayer
   name
   statistics
   CardHand
@@ -53,7 +59,7 @@ PlayingCard
   constant value
   faceUp?
 
-  redOrBlack()
+  isRed()
   toString()
   compareTo()
   getValue()

@@ -34,6 +34,9 @@ class PlayingCard implements Comparable<PlayingCard> {
       this.value = 1;
     } else if (Character.isDigit(val)) {
       this.value = Character.getNumericValue(val);
+    } else {
+      this.value = 0;
+      System.out.println(val + " does not seem to be a valid chatacter or vaue.");
     }
   }
 
