@@ -16,13 +16,15 @@ public class BlackJack extends CardGame {
   //
 
   BlackJack () {
-    // Scanner userInput = new Scanner(System.in);
-    // System.out.println("How many postions at the table?");
-    // String usrInputStr = userInput.nextLine();
-    // userInput.nextLine();
-    // if () {}
-    // Ask for size of deck
-    // create deck
+    Scanner userInput = new Scanner(System.in);
+    System.out.println("How many postions at the table?");
+    String usrInputStr = userInput.nextLine();
+    if (Character.isDigit(usrInputStr.charAt(0))) {
+      int noPos = Integer.parseInt(usrInputStr.substring(0,1));
+      System.out.println("There will be " + noPos + " at the table." );
+    } else {
+      System.out.println("Bad input.");
+    }
   }
 
   @Override
