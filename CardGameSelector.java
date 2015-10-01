@@ -14,9 +14,12 @@ public class CardGameSelector {
       if ( inputStr.isEmpty() ) {
         pgmEnd = true;
         System.out.println("Program end.");
-      } else {
+      } else if (inputStr.equals("Blackjack")){
         theGame = new BlackJack();
         theGame.runGame();
+      } else if (inputStr.equals("Patiens")){
+    	  theGame = new Patiens();
+    	  theGame.runGame();
       }
     }
   }
