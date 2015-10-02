@@ -11,15 +11,18 @@ class PlayingCard implements Comparable<PlayingCard> {
 
   private final Suit suit;
   private final int value;
+  private boolean faceUp;
 
   PlayingCard(Suit suit, int val) {
     this.suit = suit;
     this.value = val;
+    faceUp = false;
   }
 
   PlayingCard(Suit suit, String val) {
     this.suit = suit;
     this.value = Integer.parseInt(val);
+    faceUp = false;
   }
 
   PlayingCard(Suit suit, char val) {
@@ -38,6 +41,7 @@ class PlayingCard implements Comparable<PlayingCard> {
       this.value = 0;
       System.out.println(val + " does not seem to be a valid chatacter or vaue.");
     }
+    faceUp = false;
   }
 
   @Override
@@ -72,34 +76,48 @@ class PlayingCard implements Comparable<PlayingCard> {
   public String toString() {
     String valString;
 
-    switch (value) {
-      case 1:
-        valString = "A";
-        break;
-      case 11:
-        valString = "J";
-        break;
-      case 12:
-        valString = "Q";
-        break;
-      case 13:
-        valString = "K";
-        break;
-      default:
-        valString = Integer.toString(value);
-        break;
-      }
-
-      // return valString + " of " + suit;
-      return suit + valString;
+    if (faceUp) {
+      switch (value) {
+        case 1:
+          valString = "A";
+          break;
+        case 11:
+          valString = "J";
+          break;
+        case 12:
+          valString = "Q";
+          break;
+        case 13:
+          valString = "K";
+          break;
+        default:
+          valString = Integer.toString(value);
+          break;
+        }
+      valString = suit + valString;
+    } else {
+      valString = "––";
+    }
+    return suit + valString;
   }
 
-  int getValue() {
-    return this.value;
+  public void turnUp() {
+    faceUp = true;
   }
 
-  Suit getSuit() {
-    return this.suit;
+  public void turnDown() {
+    faceUp = false;
   }
 
+  public boolean isFaceUp() {
+    return faceUp;
+  }
+
+  public int getValue() {
+    return value;
+  }
+
+  public Suit getSuit() {
+    return suit;
+  }
 }
