@@ -10,31 +10,31 @@ public class Methods {
 		return input;
 	}
 
-public static void printSlowly(String text) {//skriver ut texter l�ngsamt ut en string..
+public static void printSlowly(String text) {//skriver ut texter långsamt ut en string..
 	try {
         for (char character : text.toCharArray()) {
             System.out.print(character);  // skriver varje char (i introText)
             
             if ( character != ' ' ){ //om det inte vara var ett mellanslag!
-            	Thread.sleep(50);  // v�nta lite tills n�sta.. (skapar en tr�d och v�ntar liiite)
-            }//annars v�ntar vi inte...
+            	Thread.sleep(50);  // vänta lite tills nästa.. (skapar en tråd och väntar liiite)
+            }//annars väntar vi inte...
         }
-    } catch (InterruptedException e) {//om tr�den blir fel eller liknande
-    	System.out.println(text);//skriv ut som vanligt inst�llet..
+    } catch (InterruptedException e) {//om tråden blir fel eller liknande
+    	System.out.println(text);//skriv ut som vanligt instället..
     }
 	}
 
-public static void printSlowly(String text, int mSecondsDelay) {//skriver ut texter l�ngsamt ut en string..
+public static void printSlowly(String text, int mSecondsDelay) {//skriver ut texter långsamt ut en string..
 	try {
         for (char character : text.toCharArray()) {
             System.out.print(character);  // skriver varje char (i introText)
             
             if ( character != ' ' ){ //om det inte vara var ett mellanslag!
-            	Thread.sleep(mSecondsDelay);  // v�nta lite tills n�sta.. (skapar en tr�d och v�ntar liiite)
-            }//annars v�ntar vi inte...
+            	Thread.sleep(mSecondsDelay);  // vänta lite tills nästa.. (skapar en tråd och väntar liiite)
+            }//annars väntar vi inte...
         }
-    } catch (InterruptedException e) {//om tr�den blir fel eller liknande
-    	System.out.println(text);//skriv ut som vanligt inst�llet..
+    } catch (InterruptedException e) {//om tråden blir fel eller liknande
+    	System.out.println(text);//skriv ut som vanligt instället..
     }
 	}
 
