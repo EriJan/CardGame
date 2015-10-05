@@ -1,3 +1,4 @@
+package CardGame;
 import java.util.Scanner;
 
 public class BlackJackHand extends CardHand {

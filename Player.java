@@ -1,3 +1,5 @@
+package CardGame;
+
 public class Player implements java.io.Serializable {
 
 	static int numberOfPlayers_;

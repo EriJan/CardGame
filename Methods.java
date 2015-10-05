@@ -75,4 +75,24 @@ public static String choseFromMeny(String menyElements) {
 	return menyElements_[(Integer.parseInt(choice)-1)];
 }
 
+public static String choseFromMenyNew(String... menyElements) {
+	
+	StringBuilder sb = new StringBuilder(
+			      "*********** Chose ***********\n");
+	for(int i = 0; i< menyElements.length; i++){
+		sb.append(" "
+				+ (i+1) + " : " + menyElements[i] + "\n");
+	}
+	sb.append("*****************************\n");	
+	printSlowly(sb.toString());
+	String choice;
+	do{
+		System.out.println("chose:");
+		choice = inPutFromNextLine();
+	}while ( (Integer.parseInt(choice)<0) && (!choice.matches("-?\\d+(\\.\\d+)?")|| ((Integer.parseInt(choice)-1) > menyElements.length)) );
+	
+	
+	return menyElements[(Integer.parseInt(choice)-1)];
+}
+
 }

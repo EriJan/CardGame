@@ -1,3 +1,5 @@
+package CardGame;
+
 // This class describes a standard playing card.
 // Uses the enum Suit for the suit of each card
 // implements the Comparable interface and overrides
