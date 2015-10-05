@@ -1,3 +1,5 @@
+package CardGame;
+
 // Used of standard 52 card playing deck. Suit values
 // will set sort order.
 public enum Suit {
